@@ -68,7 +68,7 @@ export function Preloader({ onComplete }: { onComplete?: () => void }) {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-2xl md:text-4xl font-light tracking-tight text-neutral-200"
             >
-              {siteConfig.name} <span className="text-[#FF5722]">✦</span>
+              <span className="text-[#FF5722]">✦</span>
             </motion.p>
             <p className="mt-3 text-base md:text-lg text-neutral-400 font-light">
               Graphic Design <span className="text-[#FF5722] font-mono">×</span> Web Engineering

@@ -139,10 +139,10 @@ export function Hero() {
                 transition={
                   isIntroActive
                     ? {
-                        duration: INTRO_TIMINGS.boxExpandDuration,
-                        delay: INTRO_TIMINGS.boxExpandDelay,
-                        ease: INTRO_TIMINGS.ease,
-                      }
+                      duration: INTRO_TIMINGS.boxExpandDuration,
+                      delay: INTRO_TIMINGS.boxExpandDelay,
+                      ease: INTRO_TIMINGS.ease,
+                    }
                     : { duration: 0 }
                 }
                 className="absolute inset-0 bg-[#FF5722] shadow-md shadow-[#FF5722]/20 pointer-events-none"
@@ -158,9 +158,8 @@ export function Hero() {
                 variants={isIntroActive ? wordVariant(INTRO_TIMINGS.nameFadeDelay) : undefined}
                 initial={isIntroActive ? "hidden" : false}
                 animate="visible"
-                className={`relative z-10 inline-block text-neutral-950 font-semibold ${
-                  !animationFinished ? "will-change-[transform,opacity,filter]" : ""
-                }`}
+                className={`relative z-10 inline-block text-neutral-950 font-semibold ${!animationFinished ? "will-change-[transform,opacity,filter]" : ""
+                  }`}
                 style={{
                   padding: "0.04em 0.22em 0.2em",
                   lineHeight: 1,
@@ -177,15 +176,14 @@ export function Hero() {
               transition={
                 isIntroActive
                   ? {
-                      duration: INTRO_TIMINGS.periodDuration,
-                      delay: INTRO_TIMINGS.periodDelay,
-                      ease: INTRO_TIMINGS.ease,
-                    }
+                    duration: INTRO_TIMINGS.periodDuration,
+                    delay: INTRO_TIMINGS.periodDelay,
+                    ease: INTRO_TIMINGS.ease,
+                  }
                   : { duration: 0 }
               }
-              className={`inline-block text-[#F5F5F5] ml-0.5 ${
-                !animationFinished ? "will-change-[transform,opacity]" : ""
-              }`}
+              className={`inline-block text-[#F5F5F5] ml-0.5 ${!animationFinished ? "will-change-[transform,opacity]" : ""
+                }`}
             >
               .
             </motion.span>
@@ -196,11 +194,10 @@ export function Hero() {
             variants={isIntroActive ? wordVariant(INTRO_TIMINGS.typewriterLineDelay) : undefined}
             initial={isIntroActive ? "hidden" : false}
             animate="visible"
-            className={`mt-6 min-h-[2.5rem] sm:min-h-[3rem] text-xl sm:text-2xl md:text-3xl font-light text-neutral-400 flex items-center justify-center gap-2 leading-relaxed ${
-              !animationFinished ? "will-change-[transform,opacity,filter]" : ""
-            }`}
+            className={`mt-6 min-h-[2.5rem] sm:min-h-[3rem] text-xl sm:text-2xl md:text-3xl font-light text-neutral-400 flex items-center justify-center gap-2 leading-relaxed ${!animationFinished ? "will-change-[transform,opacity,filter]" : ""
+              }`}
           >
-            <span className="shrink-0">I am a</span>
+            <span className="shrink-0">am a</span>
             <Typewriter
               words={words}
               className="font-normal"
@@ -217,10 +214,10 @@ export function Hero() {
         transition={
           isIntroActive
             ? {
-                duration: INTRO_TIMINGS.scrollCueDuration,
-                delay: INTRO_TIMINGS.scrollCueDelay,
-                ease: INTRO_TIMINGS.ease,
-              }
+              duration: INTRO_TIMINGS.scrollCueDuration,
+              delay: INTRO_TIMINGS.scrollCueDelay,
+              ease: INTRO_TIMINGS.ease,
+            }
             : { duration: 0.3 }
         }
         className="container-custom flex items-center justify-center text-xs font-mono text-neutral-500"
