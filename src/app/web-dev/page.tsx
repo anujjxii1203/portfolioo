@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getWebProjects, getSiteContent } from "@/lib/content";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { ArrowLeft, ArrowUpRight, Code, ExternalLink, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Code, ExternalLink, Image as ImageIcon } from "lucide-react";
 import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -50,7 +50,7 @@ export default function WebDevPage() {
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl text-neutral-400 font-light leading-relaxed max-w-2xl">
-              Building resilient digital products with production rigor: performant interfaces, accessible architectures, and fluid micro-interactions.
+              Websites and applications built with Next.js, React, and TypeScript. Focused on responsive layout, performance, and clean code.
             </p>
           </div>
 
@@ -149,7 +149,7 @@ export default function WebDevPage() {
               href="/graphic-work"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-neutral-700 hover:border-[#FF5722] text-sm text-[#F5F5F5] hover:text-[#FF5722] transition-all group"
             >
-              <Sparkles className="w-4 h-4 text-[#FF5722]" />
+              <ImageIcon className="w-4 h-4 text-[#FF5722]" />
               <span>Explore Graphic Work</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Link>

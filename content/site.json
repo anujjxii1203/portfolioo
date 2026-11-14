@@ -10,18 +10,18 @@
   "location": "Noida, India",
   "playIntro": true,
   "about": {
-    "professionTitle": "Designer & Engineer by profession",
-    "professionBody": "I turn ideas into designs, and designs into working products. Clean in look, careful in code.",
-    "ambitionTitle": "Storyteller & Explorer by ambition",
-    "ambitionBody": "Beyond the screen, I chase stories, quiet roads and poetry that make ordinary moments feel vast."
+    "professionTitle": "Designer & Developer",
+    "professionBody": "I design visual systems and build functional web products with clean layout and code.",
+    "ambitionTitle": "Storyteller & Explorer",
+    "ambitionBody": "Outside of client work, I explore photography, long drives, and cinema."
   },
   "contact": {
-    "heading": "Let’s craft something meaningful together.",
-    "subheading": "Whether you have a brand looking for a distinct visual voice, an ambitious product needing clean frontend code, or just want to chat about design and coffee — my inbox is open."
+    "heading": "Let’s build something together.",
+    "subheading": "Whether you need a brand identity, clean front-end code, or want to talk design and web development — send me a message."
   },
   "showContactPhoto": true,
   "contactPhoto": "/uploads/contact-1794669013421-dsc5733.webp",
-  "contactPhotoAlt": "Portrait photo",
+  "contactPhotoAlt": "Portrait of Anuj Rai",
   "contactPhotoFocusX": 58,
   "contactPhotoFocusY": 42,
   "email": "anujrai11986@gmail.com",
@@ -33,9 +33,9 @@
     "x": ""
   },
   "resumePath": "/resume.pdf",
-  "ogImagePath": "/images/work-01.svg",
-  "seoTitle": "Anuj rai — Graphic Designer & Web Developer",
-  "seoDescription": "A graphic designer who also writes clean code — crafting thoughtful visual identities, high-impact branding, and frictionless digital experiences.",
+  "ogImagePath": "/uploads/og-image.webp",
+  "seoTitle": "Anuj Rai — Graphic Designer & Web Developer",
+  "seoDescription": "Graphic designer and front-end developer based in Noida, India. Visual identities, branding systems, and modern web applications.",
   "contactPhotoWidth": 1600,
   "contactPhotoHeight": 1067,
   "contactPhotoBlurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAwCdASoYABAAPzmGuVOvKSWisAgB4CcJYwCo9CHfSEtOasg9NgAA/s7dylceijjpeNJgYQv1FlDZ6/PtZlEg+8MX/tIVm9PmknAjbeRgAA=="

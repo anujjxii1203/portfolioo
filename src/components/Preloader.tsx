@@ -74,7 +74,7 @@ export function Preloader({ onComplete }: { onComplete?: () => void }) {
               Graphic Design <span className="text-[#FF5722] font-mono">×</span> Web Engineering
             </p>
             <p className="mt-2 text-xs text-neutral-600 font-mono">
-              Crafting intent through form, typography &amp; clean code.
+              Portfolio &bull; Selected Works
             </p>
           </div>
 

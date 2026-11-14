@@ -21,11 +21,11 @@ export function Contact() {
     loadSite();
   }, []);
 
-  const email = site?.email || "hello@anuj.design";
-  const heading = site?.contact?.heading || "Let’s craft something meaningful together.";
+  const email = site?.email || "anujrai11986@gmail.com";
+  const heading = site?.contact?.heading || "Let’s build something together.";
   const subheading =
     site?.contact?.subheading ||
-    "Whether you have a brand looking for a distinct visual voice, an ambitious product needing clean frontend code, or just want to chat about design and coffee — my inbox is open.";
+    "Whether you need a brand identity, clean front-end code, or want to talk design and web development — send me a message.";
 
   const showPhoto = site?.showContactPhoto !== false;
   const photoSrc = site?.contactPhoto;

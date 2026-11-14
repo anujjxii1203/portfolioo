@@ -52,7 +52,3 @@
   font-family: var(--font-display), system-ui, -apple-system, sans-serif;
   letter-spacing: -0.03em;
 }
-
-.font-devanagari {
-  font-family: var(--font-devanagari), var(--font-body), sans-serif;
-}

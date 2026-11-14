@@ -5,7 +5,7 @@ import Link from "next/link";
 import { GraphicWorkContent } from "@/lib/content";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { ArrowLeft, ArrowUpRight, ChevronLeft, ChevronRight, Code, Sparkles, X } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, ChevronLeft, ChevronRight, Code, Eye, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -96,8 +96,8 @@ export default function GraphicWorkPage() {
           {/* Page Header */}
           <div className="max-w-4xl mb-14">
             <div className="flex items-center gap-3 text-xs font-mono uppercase tracking-widest text-[#FF5722] mb-3">
-              <Sparkles className="w-4 h-4" />
-              <span>Visual Arts, Brand Architecture &amp; Print</span>
+              <Eye className="w-4 h-4" />
+              <span>Posters, Brand Identity &amp; Print</span>
             </div>
 
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-medium tracking-tight text-[#F5F5F5] leading-tight">
@@ -105,7 +105,7 @@ export default function GraphicWorkPage() {
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl text-neutral-400 font-light leading-relaxed max-w-2xl">
-              A curated collection of brand identities, bilingual typographic posters, risograph publications, and editorial design systems.
+              Posters, apparel graphics, brand assets, and personal concepts.
             </p>
           </div>
 

@@ -45,7 +45,7 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const displayName = site ? `${site.name} ${site.surname}` : "Anuj [SURNAME]";
+  const displayName = site ? `${site.name} ${site.surname}` : "Anuj Rai";
   const displayRole = site?.roleTag || "Graphic Designer & Web Developer";
   const resumeHref = site?.resumePath || "/resume.pdf";
 

@@ -19,7 +19,7 @@ export function Footer() {
     loadSite();
   }, []);
 
-  const authorName = site ? `${site.name} ${site.surname}` : "Anuj [SURNAME]";
+  const authorName = site ? `${site.name} ${site.surname}` : "Anuj Rai";
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -33,13 +33,13 @@ export function Footer() {
             Designed &amp; Developed by <span className="text-[#F5F5F5]">{authorName}</span>
           </p>
           <p className="mt-1 text-[11px] text-neutral-600">
-            © {currentYear} • Next.js, Tailwind CSS &amp; Framer Motion
+            © {currentYear} • Next.js &amp; Tailwind CSS
           </p>
         </div>
 
         <div className="flex items-center gap-6">
           <span className="hidden md:inline text-neutral-600">
-            No templates. Handcrafted with intent.
+            Noida, India
           </span>
 
           <button

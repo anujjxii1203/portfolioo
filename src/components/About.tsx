@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Code, Sparkles } from "lucide-react";
+import { ArrowUpRight, Code, Eye } from "lucide-react";
 import { SiteContent } from "@/lib/content";
 
 export function About() {
@@ -50,12 +50,12 @@ export function About() {
 
             {/* Primary Heading */}
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#F5F5F5] leading-tight">
-              Bridging aesthetic obsession with technical rigor.
+              Design with clarity. Code with care.
             </h2>
 
             {/* Context/Location */}
             <p className="mt-5 text-sm sm:text-base text-neutral-400 font-mono leading-relaxed">
-              Based in {location}. Designing and shipping software interfaces, generative systems, and print artifacts since 2020.
+              Based in {location}. Designing visual identities, print graphics, and web applications.
             </p>
           </div>
 
@@ -107,7 +107,7 @@ export function About() {
                   href="/graphic-work"
                   className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-neutral-700 hover:border-[#FF5722] text-[#F5F5F5] hover:text-[#FF5722] text-xs font-mono uppercase tracking-wider transition-all group"
                 >
-                  <Sparkles className="w-3.5 h-3.5 text-[#FF5722]" />
+                  <Eye className="w-3.5 h-3.5 text-[#FF5722]" />
                   <span>Graphic Work</span>
                   <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>

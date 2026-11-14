@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, Noto_Sans_Devanagari } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { getSiteContent } from "@/lib/content";
 import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
@@ -13,13 +13,6 @@ const inter = Inter({
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-display",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const notoSansDevanagari = Noto_Sans_Devanagari({
-  variable: "--font-devanagari",
-  subsets: ["devanagari"],
-  weight: ["300", "400", "500", "700"],
   display: "swap",
 });
 
@@ -109,7 +102,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${notoSansDevanagari.variable} dark`}
+      className={`${inter.variable} ${spaceGrotesk.variable} dark`}
     >
       <head>
         <script
