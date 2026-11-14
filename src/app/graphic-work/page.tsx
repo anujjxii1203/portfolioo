@@ -5,7 +5,7 @@ import Link from "next/link";
 import { GraphicWorkContent } from "@/lib/content";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { ArrowLeft, ArrowUpRight, ChevronLeft, ChevronRight, Code, Eye, X } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, ChevronLeft, ChevronRight, Code, Eye, X, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -16,6 +16,8 @@ export default function GraphicWorkPage() {
   const [items, setItems] = useState<GraphicWorkContent[]>([]);
   const [activeCategory, setActiveCategory] = useState<CategoryFilter>("All");
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [imageLoading, setImageLoading] = useState(true);
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     async function fetchItems() {
@@ -41,6 +43,14 @@ export default function GraphicWorkPage() {
     selectedIndex !== null && selectedIndex >= 0 && selectedIndex < filteredItems.length
       ? filteredItems[selectedIndex]
       : null;
+
+  // Reset loading & error states when switching selected index
+  useEffect(() => {
+    if (selectedIndex !== null) {
+      setImageLoading(true);
+      setImageError(false);
+    }
+  }, [selectedIndex]);
 
   const handlePrev = useCallback(() => {
     if (filteredItems.length === 0) return;
@@ -78,9 +88,27 @@ export default function GraphicWorkPage() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [selectedIndex, handleClose, handlePrev, handleNext]);
 
+  // Preload neighboring images for instant switching
+  const prevItem =
+    selectedIndex !== null && filteredItems.length > 1
+      ? filteredItems[(selectedIndex - 1 + filteredItems.length) % filteredItems.length]
+      : null;
+  const nextItem =
+    selectedIndex !== null && filteredItems.length > 1
+      ? filteredItems[(selectedIndex + 1) % filteredItems.length]
+      : null;
+
   return (
     <>
       <Navbar />
+
+      {/* Preload adjacent images */}
+      {prevItem?.imagePath && (
+        <link rel="prefetch" href={prevItem.imagePath} as="image" />
+      )}
+      {nextItem?.imagePath && (
+        <link rel="prefetch" href={nextItem.imagePath} as="image" />
+      )}
 
       <main id="main" className="pt-32 pb-28">
         <div className="container-custom">
@@ -129,7 +157,7 @@ export default function GraphicWorkPage() {
             ))}
           </div>
 
-          {/* True Masonry Column Layout — Full Uncropped Images at Natural Aspect Ratio */}
+          {/* True Masonry Column Layout */}
           <motion.div
             layout
             className="columns-1 sm:columns-2 lg:columns-3 gap-6 [column-fill:_balance]"
@@ -248,14 +276,15 @@ export default function GraphicWorkPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
             onClick={handleClose}
             className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md p-3 sm:p-6 md:p-8 flex items-center justify-center overflow-y-auto"
           >
             {/* Modal Dialog Box */}
             <motion.div
-              initial={{ scale: 0.96, opacity: 0, y: 10 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.96, opacity: 0, y: 10 }}
+              initial={{ scale: 0.97, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.97, opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={(e) => e.stopPropagation()}
               className="relative w-full max-w-5xl max-h-[92vh] flex flex-col rounded-2xl bg-neutral-950 border border-neutral-800 shadow-2xl overflow-hidden"
@@ -302,23 +331,54 @@ export default function GraphicWorkPage() {
                 </div>
               </div>
 
-              {/* Modal Main Area: Full Size Image Containment */}
-              <div className="relative flex-1 min-h-[300px] max-h-[64vh] sm:max-h-[70vh] bg-neutral-950 flex items-center justify-center p-3 sm:p-6 overflow-hidden select-none">
-                {selectedItem.imagePath ? (
-                  <div className="relative w-full h-full flex items-center justify-center">
-                    <Image
-                      src={selectedItem.imagePath}
-                      alt={selectedItem.title}
-                      fill
-                      priority
-                      className="object-contain"
-                      sizes="(max-width: 1200px) 90vw, 1200px"
-                    />
+              {/* Modal Main Area: Scrollable Image Viewport with Natural Aspect Ratio */}
+              <div className="relative min-h-[260px] max-h-[66vh] sm:max-h-[70vh] bg-neutral-950/90 flex items-center justify-center p-3 sm:p-6 overflow-y-auto select-none">
+                {/* Loading Spinner */}
+                {imageLoading && !imageError && (
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-neutral-500 font-mono text-xs">
+                    <Loader2 className="w-6 h-6 animate-spin text-[#FF5722]" />
+                    <span>Loading preview...</span>
                   </div>
+                )}
+
+                {/* Error Fallback */}
+                {imageError ? (
+                  <div className="text-center p-8">
+                    <span className="text-5xl font-serif text-white/20 select-none block mb-2">✦</span>
+                    <p className="text-xs font-mono text-rose-400">Image could not be loaded</p>
+                    <p className="text-[10px] font-mono text-neutral-600 mt-1">{selectedItem.imagePath}</p>
+                  </div>
+                ) : selectedItem.imagePath ? (
+                  /* Reliable <img> display: Sizes itself from natural image aspect ratio, no collapse */
+                  <img
+                    key={selectedItem.id + selectedItem.imagePath}
+                    src={selectedItem.imagePath}
+                    alt={selectedItem.title}
+                    loading="eager"
+                    decoding="async"
+                    onLoad={() => setImageLoading(false)}
+                    onError={() => {
+                      setImageLoading(false);
+                      setImageError(true);
+                      console.error("Image failed to load in lightbox:", selectedItem.imagePath);
+                    }}
+                    style={{
+                      width: "auto",
+                      height: "auto",
+                      maxWidth: "100%",
+                      maxHeight: "68vh",
+                      objectFit: "contain",
+                      display: "block",
+                      margin: "0 auto",
+                    }}
+                    className={`rounded-lg transition-opacity duration-200 ${
+                      imageLoading ? "opacity-0" : "opacity-100"
+                    }`}
+                  />
                 ) : (
                   <div className="text-center p-8">
-                    <span className="text-7xl font-serif text-white/20 select-none">✦</span>
-                    <p className="mt-4 text-xs font-mono text-neutral-500">Visual preview not available</p>
+                    <span className="text-6xl font-serif text-white/20 select-none">✦</span>
+                    <p className="mt-3 text-xs font-mono text-neutral-500">Visual preview not available</p>
                   </div>
                 )}
               </div>
@@ -330,7 +390,7 @@ export default function GraphicWorkPage() {
                     {selectedItem.title}
                   </h2>
                   <span className="text-xs font-mono text-neutral-500 shrink-0">
-                    Natural Ratio &bull; High Resolution
+                    Full Resolution &bull; Natural Aspect
                   </span>
                 </div>
 
