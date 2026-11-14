@@ -1,0 +1,57 @@
+[
+  {
+    "id": "proj-1",
+    "slug": "insertix-media",
+    "number": "01",
+    "title": "Insertix Media",
+    "description": "Cinema-grade media platform with a Next.js frontend, a secured Express API and an admin CMS for managing content with live updates.",
+    "techTags": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB Atlas",
+      "ImageKit",
+      "Vercel",
+      "Render"
+    ],
+    "keyResult": "Full-stack build: cinema-grade frontend, secured API & live-update admin CMS",
+    "liveUrl": "https://www.insertixmedia.com/",
+    "caseStudyUrl": "/work/insertix-media",
+    "coverImage": "/uploads/1794645816186-Screenshot_2026_11_14_141235.webp",
+    "year": "2026",
+    "role": "Designer & Full-Stack Developer",
+    "order": 1,
+    "visible": true
+  },
+  {
+    "id": "proj-2",
+    "slug": "aura-streetwear-store",
+    "number": "02",
+    "title": "AURA Streetwear Store",
+    "description": "Premium streetwear boutique with exclusive drops, oversized tees, structured denim and urban essentials, designed around a bold red brand identity.",
+    "techTags": [
+      "React",
+      "Vite",
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Razorpay",
+      "Framer Motion",
+      "Vercel"
+    ],
+    "keyResult": "Premium streetwear storefront built around bold branding and a drop-based shopping experience",
+    "liveUrl": "https://auraa-store.vercel.app",
+    "caseStudyUrl": "/work/aura-streetwear-store",
+    "coverImage": "/uploads/1794646310386-Screenshot_2026_11_14_142032.webp",
+    "year": "2025",
+    "role": "Designer & Front-End Developer",
+    "order": 2,
+    "visible": true
+  }
+]

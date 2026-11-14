@@ -1,0 +1,212 @@
+[
+  {
+    "id": "gw-7",
+    "title": "KIET Movie Society Tee",
+    "category": "Branding",
+    "description": "Oversized tee concept for a college film society, with colourful illustrated cinema artwork on the back.",
+    "imagePath": "/uploads/kiet-film-society-tee.webp",
+    "year": "2026",
+    "tags": [
+      "Apparel",
+      "Illustration",
+      "College Merch"
+    ],
+    "gradient": "from-emerald-950/40 via-teal-900/20 to-neutral-950",
+    "accent": "#10B981",
+    "aspect": "wide",
+    "order": 1,
+    "visible": true,
+    "width": 2000,
+    "height": 1125,
+    "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAwBACdASoYAA4APzmEuVOvKKWisAgB4CcJZwAIEAPemt8oT0ehekS/e6AA/gdJuOEGMQJB8KUVJOUfNftzIEylQrHv8OpXGoyQQbPMlB76HIPp8c/JoB9fpkCcIO1gydAFH1OO9vDr3Q6GnmK297KH1DqVD7TtXBfcbph2D9J7OwzHGFybcxIxwUJRH5yZ+dpBYgAA"
+  },
+  {
+    "id": "gw-1",
+    "title": "Mythx Endgame Protocol Banner",
+    "category": "Social",
+    "description": "Event banner for Mythx’s cybersecurity summit and CTF, with a neon green, Avengers-inspired villain visual.",
+    "imagePath": "/uploads/mythx-endgame-banner.webp",
+    "year": "2026",
+    "tags": [
+      "Event Banner",
+      "Neon Green",
+      "Cybersecurity"
+    ],
+    "gradient": "from-amber-600/30 via-orange-950/40 to-neutral-950",
+    "accent": "#FF5722",
+    "aspect": "wide",
+    "order": 2,
+    "visible": true,
+    "width": 1584,
+    "height": 396,
+    "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACwAwCdASoYAAYAPzmEuVOvKKWisAgB4CcJQBadBC11QhcBJ2llKAD+2lZTofac4PheMzJFZrHxtQJQOGljYhaXcnn2fHZJiPm99zb+aq1H1b1oQUT/UAcUAAA="
+  },
+  {
+    "id": "gw-1794668484058",
+    "title": "Mythx Organiser T-Shirt",
+    "category": "Branding",
+    "description": "Front and back organiser tee in black, with a neon green logo, outline lettering and a liquid topographic pattern.",
+    "imagePath": "/uploads/1794668543853-organiser.webp",
+    "year": "2026",
+    "tags": [
+      "Apparel",
+      "Merch",
+      "Neon Green"
+    ],
+    "gradient": "from-amber-600/30 via-orange-950/40 to-neutral-950",
+    "accent": "#FF5722",
+    "aspect": "wide",
+    "order": 3,
+    "visible": true,
+    "width": 1920,
+    "height": 1080,
+    "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAQBACdASoYAA4APzmEuVOvKKWisAgB4CcJZQAAYekag7gLW6x/uwOZAAD+t7ATbv0kGB5dtFF+xizzm/NBdjL/zBKcrZDLgol/Iv1riXmYezbdtESOCqRzHyAYWwV74i4oQbNJ9KaC+AxvAreOo2MytKxcF/1X+vJ1Wut/zEKblkj0LQOSHi3wdwqZeAS33QLAAA=="
+  },
+  {
+    "id": "gw-2",
+    "title": "Men Are Brave",
+    "category": "Posters",
+    "description": "Concept poster in red and black with a grainy, distressed texture, built around a lone Batman silhouette.",
+    "imagePath": "/uploads/batman-poster.webp",
+    "year": "2025",
+    "tags": [
+      "Movie Poster",
+      "Texture",
+      "Concept"
+    ],
+    "gradient": "from-stone-800/60 via-amber-900/30 to-neutral-950",
+    "accent": "#D97706",
+    "aspect": "tall",
+    "order": 4,
+    "visible": true,
+    "width": 2000,
+    "height": 2667,
+    "blurDataURL": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAAAwBgCdASoYACAAPzmEtlQvKCSjMBgMAeAnCWwAnTLjgrWgJYA3mwEVbG1LWdhoDalpHfDSC+/p4SB4AP59RRR6S2rv3o8vgEONXsbl92PM4epHT3+/QsQHzoPTJG+UWfj0z9tZuQlTXxHLOdoIdBRFlO+kHwrvJkwS1CCLqzTG6oRcWZonA1ORsZyLEqwujwoQ/u7ZtzQy4NCQCJEQ+mi7DvH7AFcOWtHuDZpyKQPBfEuG7yk4F/+ujUduzGVG4E7oEAggAAA="
+  },
+  {
+    "id": "gw-3",
+    "title": "Insertix Media Business Card",
+    "category": "Branding",
+    "description": "Business card for a video and photo production studio, with a blue gothic wordmark and flowing line patterns on a dark base.",
+    "imagePath": "/uploads/insertix-business-card.webp",
+    "year": "2026",
+    "tags": [
+      "Card",
+      "Brand Identity",
+      "Dark Theme"
+    ],
+    "gradient": "from-orange-900/30 via-rose-950/40 to-neutral-950",
+    "accent": "#F43F5E",
+    "aspect": "wide",
+    "order": 5,
+    "visible": true,
+    "width": 1050,
+    "height": 600,
+    "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAwCdASoYAA4APzmYvlYvLCajsAgB4CcJQAAjs4rVFSD8KGnN6uAA/vFJd7HRrDgFOdo5Qc6Fy5hoqnIcibwdGJt2wAmXgqM2ZTH6ckJKwwtWdKw9mWtpQtbaiAAA"
+  },
+  {
+    "id": "gw-4",
+    "title": "Fight Club Poster",
+    "category": "Posters",
+    "description": "Concept poster with a split red and monochrome face composition and a distressed title treatment.",
+    "imagePath": "/uploads/fight-club-poster.webp",
+    "year": "2025",
+    "tags": [
+      "Movie Poster",
+      "Duotone",
+      "Grunge"
+    ],
+    "gradient": "from-rose-950/40 via-orange-900/30 to-neutral-950",
+    "accent": "#FB923C",
+    "aspect": "tall",
+    "order": 6,
+    "visible": true,
+    "width": 2000,
+    "height": 2667,
+    "blurDataURL": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAAAQBQCdASoYACAAPzmSu1gvKiWjqAqp4CcJYgC32TNBTW8hDkpKmJlkm0HhgIdmUZwAAP68c1O3DKyChckKBqTYaDlm729dB0IEXR9Dze/Dg4JgHpOeno/rnsAvrU4ahsWf4oUTaMdj2LUUos1h5E3S5jsudsoFjwd/OPLlAquDqKt47hBkA4hxKW4uZ1Dq2pdJ6rPsOk9oenEAMtN54AAA"
+  },
+  {
+    "id": "gw-5",
+    "title": "Koenigsegg Hypercar Poster",
+    "category": "Posters",
+    "description": "Striking automotive poster showcasing the engineering aesthetics and aggressive aerodynamic profile of Koenigsegg.",
+    "imagePath": "/uploads/koenigsegg-poster.webp",
+    "year": "2025",
+    "tags": [
+      "Automotive",
+      "Hypercar",
+      "Poster"
+    ],
+    "gradient": "from-orange-950/40 via-amber-900/30 to-neutral-950",
+    "accent": "#FF5722",
+    "aspect": "tall",
+    "order": 7,
+    "visible": true,
+    "width": 2000,
+    "height": 2829,
+    "blurDataURL": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4IMoAAAAwBgCdASoYACIAPzmOulevKaUjqrgMAeAnCWkAAF/bD81DglbFyoMXglpqP4DeImbrGhS11s7W483AAP7o0H5ROPwOOVexdLvqYxYIGaDbtQTUqke6lc1k+FHwu7cVmtpO7rGHpMyT5N/T+0Ho/D+OQpicnOC65JAfBa31vC6T34Jmn/4eyZDvkmHmmzz8lvNPyKoRH83JVQbMIP9ecDRmMtmpxnoni6IW1i7oTDqTuKSnQ4ZjDGUBd0phnD7VCEveveTMTQmooAAA"
+  },
+  {
+    "id": "gw-6",
+    "title": "Max Verstappen World Champion Poster",
+    "category": "Posters",
+    "description": "High-octane Formula 1 artwork celebrating Max Verstappen and Red Bull Racing in intense contrasting tones.",
+    "imagePath": "/uploads/max-verstappen-poster.webp",
+    "year": "2025",
+    "tags": [
+      "Formula 1",
+      "Racing",
+      "Poster"
+    ],
+    "gradient": "from-blue-950/40 via-indigo-900/30 to-neutral-950",
+    "accent": "#3B82F6",
+    "aspect": "tall",
+    "order": 8,
+    "visible": true,
+    "width": 2000,
+    "height": 2667,
+    "blurDataURL": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAACwBQCdASoYACAAPzmQvFgvKaWjqAqp4CcJZgCxHoABowRcGyBRhzmHG3dGJJOqMGa2KIAv5KAA/tnpwp++8DStFCoOR7D7ORdvwFp8lK6roPWMmDoTGqHLsv9ya116BpVICjvwWTwI1VScxZ9V38dVwgGx2QRNG370h/7j+gkqKm04ytKqKDSZpOExcmxcSH4gbrolq+xK0fvTpdQ6VUKV1Bc1X4oOTn4kv/d2FP9/92Dvcbi90dPRPva3el3wwuAAAA=="
+  },
+  {
+    "id": "gw-8",
+    "title": "Sprite Fresh Poster",
+    "category": "Branding",
+    "description": "Product poster with a tilted can over giant white type, surrounded by lime, lemon and mint on a green background.",
+    "imagePath": "/uploads/sprite-poster.webp",
+    "year": "2026",
+    "tags": [
+      "Product Ad",
+      "Typography",
+      "Concept"
+    ],
+    "gradient": "from-emerald-950/40 via-teal-900/30 to-neutral-950",
+    "accent": "#10B981",
+    "aspect": "tall",
+    "order": 9,
+    "visible": true,
+    "width": 1200,
+    "height": 1800,
+    "blurDataURL": "data:image/webp;base64,UklGRh4BAABXRUJQVlA4IBIBAACQBwCdASoYACQAPy18t1Oup6WitVgMAdAliWwAtRvahRkK0n9MABUMIrXnpCHuzCrXdWW0PEQipfUAAjiKS/hXZxkESuAA/RzNP/Nj0/WhQOD2qi5YaKeu3tyZlffbIoiEAC2flh+8Af+TBj2qtBzSx7C5jsIAZ4/m3F5qjeMDwKtgnxN1z59ChTEh5V4p9ubDnoHwg8aQmccBc5lboJOCz6ZD4cunlf3/9Z5oQ8YA9LOsJKa5QeuWSsF7lbTQGpYbw8KRm5G0J238dxQD8YIcL2eUrCnRqoUDwplmXy0ScWO2ngxR/BK7yY2ytOY7os+BWCUdHxdEPdRAVX9vko6s5kNUvKXd/iD04JD2mOTOAAAA"
+  },
+  {
+    "id": "gw-9",
+    "title": "Sony Audio Visual Campaign",
+    "category": "Branding",
+    "description": "Minimalist product campaign emphasizing acoustic fidelity, precision design and bold studio lighting.",
+    "imagePath": "/uploads/sony-poster.webp",
+    "year": "2025",
+    "tags": [
+      "Product Ad",
+      "Minimalist",
+      "Branding"
+    ],
+    "gradient": "from-purple-950/40 via-violet-900/30 to-neutral-950",
+    "accent": "#A855F7",
+    "aspect": "tall",
+    "order": 10,
+    "visible": true,
+    "width": 1200,
+    "height": 1800,
+    "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAADwAwCdASoYACQAPzmGuVSvKKWjNVQIAeAnCWQAzcAJ/MIeBvSOCONQAP4AVmjoXLwbzAjP4MSjGCxc+gvjmAgFt3oXbmBzevOx1qkjtS2DdtORJ0pg4fOZko5yxR1/vKMb1VpoYnG711HTTOZiEek9xOYw9eApRXNt5fFX6/AT02uAaRvGAZnupP2DY0uYFwpAAA=="
+  }
+]

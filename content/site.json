@@ -1,0 +1,42 @@
+{
+  "name": "Anuj",
+  "surname": "rai",
+  "roleTag": "Graphic Designer & Web Developer",
+  "heroHighlight": "Anuj",
+  "typewriterWords": [
+    "Graphic Designer",
+    "Web Developer"
+  ],
+  "location": "Noida, India",
+  "playIntro": true,
+  "about": {
+    "professionTitle": "Designer & Engineer by profession",
+    "professionBody": "I turn ideas into designs, and designs into working products. Clean in look, careful in code.",
+    "ambitionTitle": "Storyteller & Explorer by ambition",
+    "ambitionBody": "Beyond the screen, I chase stories, quiet roads and poetry that make ordinary moments feel vast."
+  },
+  "contact": {
+    "heading": "Let’s craft something meaningful together.",
+    "subheading": "Whether you have a brand looking for a distinct visual voice, an ambitious product needing clean frontend code, or just want to chat about design and coffee — my inbox is open."
+  },
+  "showContactPhoto": true,
+  "contactPhoto": "/uploads/contact-1794669013421-dsc5733.webp",
+  "contactPhotoAlt": "Portrait photo",
+  "contactPhotoFocusX": 58,
+  "contactPhotoFocusY": 42,
+  "email": "anujrai11986@gmail.com",
+  "accentColor": "#CF4F22",
+  "socials": {
+    "github": "https://github.com/anujjxii1203/",
+    "linkedin": "https://www.linkedin.com/in/anuj-rai-a458b8385/",
+    "behance": "https://www.behance.net/vivekrai31",
+    "x": ""
+  },
+  "resumePath": "/resume.pdf",
+  "ogImagePath": "/images/work-01.svg",
+  "seoTitle": "Anuj rai — Graphic Designer & Web Developer",
+  "seoDescription": "A graphic designer who also writes clean code — crafting thoughtful visual identities, high-impact branding, and frictionless digital experiences.",
+  "contactPhotoWidth": 1600,
+  "contactPhotoHeight": 1067,
+  "contactPhotoBlurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAwCdASoYABAAPzmGuVOvKSWisAgB4CcJYwCo9CHfSEtOasg9NgAA/s7dylceijjpeNJgYQv1FlDZ6/PtZlEg+8MX/tIVm9PmknAjbeRgAA=="
+}

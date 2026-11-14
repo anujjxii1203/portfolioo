@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --nav-h: 80px;
+    --bg-primary: #0A0A0A;
+    --bg-secondary: #141414;
+    --text-primary: #F5F5F5;
+    --text-muted: #8A8A8A;
+    --accent: #FF5722;
+    --border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    selection-background-color: var(--accent);
+    selection-color: #0A0A0A;
+  }
+
+  ::selection {
+    background: #FF5722;
+    color: #0A0A0A;
+  }
+}
+
+/* Custom utility classes */
+.container-custom {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display), system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.font-devanagari {
+  font-family: var(--font-devanagari), var(--font-body), sans-serif;
+}

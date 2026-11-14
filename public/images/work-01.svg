@@ -1,0 +1,16 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#0C0C0C"/>
+  <circle cx="400" cy="300" r="240" fill="url(#paint0_radial)" fill-opacity="0.25"/>
+  <rect x="80" y="80" width="640" height="440" rx="16" stroke="#262626" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="120" y="240" fill="#EDEDED" font-family="system-ui, sans-serif" font-size="44" font-weight="700" letter-spacing="-0.02em">AURA STUDIO</text>
+  <text x="120" y="290" fill="#FF5722" font-family="system-ui, sans-serif" font-size="16" font-weight="600" letter-spacing="0.2em">VISUAL IDENTITY &amp; DESIGN SYSTEM</text>
+  <text x="120" y="340" fill="#737373" font-family="system-ui, sans-serif" font-size="16" max-width="400">Typography, Brand Architecture &amp; Web Experience</text>
+  <path d="M600 240L640 280L600 320" stroke="#FF5722" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(400 300) rotate(90) scale(300)">
+      <stop stop-color="#FF5722"/>
+      <stop offset="1" stop-color="#0A0A0A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
+

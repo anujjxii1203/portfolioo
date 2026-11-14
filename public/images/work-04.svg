@@ -1,0 +1,8 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#0C0C0C"/>
+  <rect x="80" y="80" width="640" height="440" rx="16" stroke="#262626" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <text x="120" y="240" fill="#EDEDED" font-family="system-ui, sans-serif" font-size="44" font-weight="700">NEXUS DESIGN SYSTEM</text>
+  <text x="120" y="290" fill="#A3A3A3" font-family="system-ui, sans-serif" font-size="16" font-weight="600" letter-spacing="0.2em">MULTI-BRAND REACT COMPONENT SUITE</text>
+  <text x="120" y="360" fill="#737373" font-family="system-ui, sans-serif" font-size="20">Case Study Coming Soon</text>
+</svg>
+
