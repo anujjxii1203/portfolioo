@@ -28,35 +28,11 @@ Showcasing brand identities, editorial posters, and responsive web applications 
 npm install
 ```
 
-### 3. Environment Setup
-Copy `.env.example` to `.env.local`:
-```bash
-cp .env.example .env.local
-```
-Set your local admin password in `.env.local`:
-```env
-ADMIN_PASSWORD=your_secure_local_password
-```
 
-### 4. Run Development Server
+### 3. Run Development Server
 ```bash
 npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ---
-
-## 🔒 Local Admin Panel
-
-The site includes a local-only dashboard at `/admin` to edit site copy, reorder web projects, upload posters, and replace resume files directly from the browser.
-
-> **Security Note**: The `/admin` route and all `/api/admin/*` endpoints are locked strictly to local development (`NODE_ENV === "development"`). In production, they automatically return a `404 Not Found`.
-
----
-
-## 🚢 Production Deployment (Vercel)
-
-1. Push your repository to GitHub.
-2. Import the repository in [Vercel](https://vercel.com).
-3. Set Framework Preset to **Next.js**.
-4. Deploy — static assets and pages will be generated automatically.
