@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+/* 1. Global Scrollbar Elimination Across All Browsers & Inner Containers */
+html,
+body,
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
+
 @layer base {
   :root {
     --nav-h: 80px;
@@ -51,4 +68,48 @@
 .font-display {
   font-family: var(--font-display), system-ui, -apple-system, sans-serif;
   letter-spacing: -0.03em;
+}
+
+/* Scroll Fade Indicator Masks */
+.scroll-fade-mask-both {
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 24px,
+    black calc(100% - 24px),
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 24px,
+    black calc(100% - 24px),
+    transparent 100%
+  );
+}
+
+.scroll-fade-mask-bottom {
+  mask-image: linear-gradient(
+    to bottom,
+    black calc(100% - 24px),
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black calc(100% - 24px),
+    transparent 100%
+  );
+}
+
+.scroll-fade-mask-top {
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 24px
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 24px
+  );
 }

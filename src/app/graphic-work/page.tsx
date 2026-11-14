@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { GraphicWorkContent } from "@/lib/content";
 import { Navbar } from "@/components/Navbar";
@@ -18,6 +18,9 @@ export default function GraphicWorkPage() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [imageLoading, setImageLoading] = useState(true);
   const [imageError, setImageError] = useState(false);
+  const [canScrollTop, setCanScrollTop] = useState(false);
+  const [canScrollBottom, setCanScrollBottom] = useState(false);
+  const scrollAreaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     async function fetchItems() {
@@ -49,8 +52,41 @@ export default function GraphicWorkPage() {
     if (selectedIndex !== null) {
       setImageLoading(true);
       setImageError(false);
+      setCanScrollTop(false);
+      setCanScrollBottom(false);
     }
   }, [selectedIndex]);
+
+  // Lock body scroll cleanly while lightbox is open without layout jump
+  useEffect(() => {
+    if (selectedIndex !== null) {
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = originalOverflow;
+      };
+    }
+  }, [selectedIndex]);
+
+  // Check scroll position for soft top/bottom gradient mask
+  const checkScroll = useCallback(() => {
+    const el = scrollAreaRef.current;
+    if (!el) return;
+    const hasOverflow = el.scrollHeight > el.clientHeight + 4;
+    if (!hasOverflow) {
+      setCanScrollTop(false);
+      setCanScrollBottom(false);
+      return;
+    }
+    setCanScrollTop(el.scrollTop > 8);
+    setCanScrollBottom(el.scrollTop + el.clientHeight < el.scrollHeight - 8);
+  }, []);
+
+  useEffect(() => {
+    if (!imageLoading && scrollAreaRef.current) {
+      checkScroll();
+    }
+  }, [imageLoading, checkScroll]);
 
   const handlePrev = useCallback(() => {
     if (filteredItems.length === 0) return;
@@ -331,8 +367,22 @@ export default function GraphicWorkPage() {
                 </div>
               </div>
 
-              {/* Modal Main Area: Scrollable Image Viewport with Natural Aspect Ratio */}
-              <div className="relative min-h-[260px] max-h-[66vh] sm:max-h-[70vh] bg-neutral-950/90 flex items-center justify-center p-3 sm:p-6 overflow-y-auto select-none">
+              {/* Modal Main Area: Scrollable Image Viewport with Natural Aspect Ratio & Soft Gradient Mask */}
+              <div
+                ref={scrollAreaRef}
+                tabIndex={0}
+                onScroll={checkScroll}
+                aria-label="Image preview area. Use arrow keys, space, or mouse wheel to scroll"
+                className={`relative min-h-[260px] max-h-[66vh] sm:max-h-[70vh] bg-neutral-950/90 flex items-center justify-center p-3 sm:p-6 overflow-y-auto select-none focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF5722]/60 ${
+                  canScrollTop && canScrollBottom
+                    ? "scroll-fade-mask-both"
+                    : canScrollBottom
+                    ? "scroll-fade-mask-bottom"
+                    : canScrollTop
+                    ? "scroll-fade-mask-top"
+                    : ""
+                }`}
+              >
                 {/* Loading Spinner */}
                 {imageLoading && !imageError && (
                   <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-neutral-500 font-mono text-xs">
@@ -356,7 +406,10 @@ export default function GraphicWorkPage() {
                     alt={selectedItem.title}
                     loading="eager"
                     decoding="async"
-                    onLoad={() => setImageLoading(false)}
+                    onLoad={() => {
+                      setImageLoading(false);
+                      setTimeout(checkScroll, 50);
+                    }}
                     onError={() => {
                       setImageLoading(false);
                       setImageError(true);
